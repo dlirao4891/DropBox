@@ -7,7 +7,6 @@ Another reason is that most companies’ firewalls will block unauthorized acces
 
 The best possible solution is to get the DropBox inside the network to reach back to a C2 (command and control) server. And reach the DropBox from anywhere using the reverse shell through SSH, using the C2 as a passthrough tunnel.
 
-Raspberry -> reverse SSH -> C2 Server <- SSH <- Attacker machine
 ![Reverse Shell](https://github.com/dlirao4891/DropBox/blob/main/Images/blog.finxter.com-reverseshell-768x432.jpg?raw=true)
 
 ## Kali installation 
