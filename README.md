@@ -17,7 +17,7 @@ Kali can be installed right from the [Raspberry Pi Imager](https://www.raspberry
 
 After installing Kali on the Raspberry Pi, SSH into it. You can find its IP address using your router.
 
-![IP got from router](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-IP.png?raw=true) <br/>
+![IP got from router](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-IP.png?raw=true) <br>
 My case I got: `10.10.10.6`
 
 ```bash
@@ -55,7 +55,10 @@ At this point, the basic configuration is done on the Raspberry Pi. But we will 
 ---
 ## C2 settings
 
-A crucial part of this is the Command and Control server. It’s the middle-man in the communication. The DropBox will try to make contact with it, and when the connection is established, the reverse shell will be accessible.
+A crucial part of this is the Command and Control server. It’s the middle-man in the communication. The DropBox will try to make contact with it, and when the connection is established, the reverse shell will be accessible.<br>
+
+![C2 info](https://github.com/dlirao4891/DropBox/blob/main/Images/C2-info.png?raw=true)
+<br>
 
 For this, I decided to use a Ubuntu 22.04 LTS on [Linode](www.linode.com). It's just a basic shared CPU with privet IP.
 ### SSH configuration
@@ -67,6 +70,9 @@ GatewayPorts yes
 PasswordAuthentication yes
 ```
 This will enable port forwarding and enable authentication using a password.
+<br>
+![C2 info](https://github.com/dlirao4891/DropBox/blob/main/Images/C2-sshconf.png?raw=true)
+<br>
 
 After changing the lines, just restart the SSH service.
 ```bash
