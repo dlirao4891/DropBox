@@ -13,11 +13,19 @@ The best possible solution is to get the DropBox inside the network to reach bac
 ### Image download and install
 Kali can be installed right from the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) or following the guide on [Kali](https://www.kali.org/docs/arm/raspberry-pi-4/) The Process is really easy.
 
+![Kali Installation](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-install.png?raw=true)
+
 After installing Kali on the Raspberry Pi, SSH into it. You can find its IP address using your router.
+
+![IP got from router](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-IP.png?raw=true) <br/>
+My case I got: `10.10.10.6`
+
 ```bash
 ssh kali@[kali-IP]
 ```
 The default user and password are `kali:kali`
+
+![First shell](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-first-shell.png?raw=true)
 
 Update and upgrade 
 ```bash
@@ -25,6 +33,8 @@ sudo apt update && sudo apt full-upgrade
 ```
 
 **After that, change the default password for the `Kali` user.**
+
+![Change password](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-passwd.png?raw=true)
 
 ### Minor modifications
 
@@ -35,6 +45,8 @@ Here, anything is valid as long as it looks like it belongs to the company. If y
 
 >On `/etc/hostname`, choose the name you want.
 >On `/etc/hosts`, use the same name on the line containing the loopback address (`127.0.1.1`).
+
+![Change hostname](https://github.com/dlirao4891/DropBox/blob/main/Images/kali-changehostname.png?raw=true)
 
 After this step, the DropBox will mostly look like it’s just another host on the network. Of course, there are situations when the company adopts MAC-address filtering. And This can be a problem.
 
